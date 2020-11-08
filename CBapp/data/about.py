@@ -1,0 +1,6 @@
+bot = {
+    "name": "Alex"
+    "tasks":[
+
+    ]
+}

@@ -5,35 +5,38 @@
     </title> 
     <link rel="stylesheet" href="{{ url_for('static',filename='css/stylesheet.css') }}"> 
    </head> 
-   <body> 
-    <img src="{{ url_for('static',filename='assets/Screenshot_2020-10-31-18-59-01-59.jpg') }}" width="400px" height="250px" class="center"< \img>  
-    <h1 style="text-align:center;color: white;;font-size: 300%;;">It's nice to meet you</h1> 
-    <div> 
-     <h2 style="text-align:center;color:white;font-size: 180%;font-style: italic;"> I am here to help you with :) </h2> 
-    </div> 
-    <div>
-     <img src="{{ url_for('static',filename='assets/image1.jpg') }}" width="440px" height="250px" < \img> 
-     <img src="{{ url_for('static',filename='assets/chatbot.jpeg') }}" width="440px" height="250px" < \img>
-     <img src="{{ url_for('static',filename='assets/image2.jpg') }}" width="440px" height="250px" < \img>
-    </div> 
-    <div id="service"> 
-     <h2 style="text-align: left;color:white;font-size: 180%;"><b> &nbsp; &nbsp; Booking Doctor appointments. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Medical test appointments</b> </h2> 
-     <h2 style="text-align:center;color:white;font-size: 180%;"><b>Nothing is more important than your HEALTH. </b> </h2>
-     <h2 style="color:white;font-size: 180%;font-style: italic;"> <b> *Get your doctor appointments fixed from anywhere.<br> *No need to come to hospital for your medical tests. We come to you to collect your test samples. <br></h2>
-     <h2 style="color:white;font-size: 180%;font-style: italic;"> <b> *We provided two services .<br>&nbsp; 1)Booking Doctor Appointment We take the details of the patient and book the appointment in available timings.<br>&nbsp;2)Medical Tests at home We take the details of the patient and the test and also the address from where the test samples have to be collected.<br></h2>  
-    </div> 
-      
-      <button class="open-button" onclick="openForm()">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="pop-up.png" width="144px" height="125px" < \img></button>
-      
-      <div class="chat-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-            <img src="{{ url_for('static',filename='assets/logo.png') }}" width="70px" height="70px" < \img>
-        <textarea placeholder="Hi I am Alex the chatbot :)" name="msg" required></textarea>
-    
-        <button type="submit" class="btn">Send</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Exit</button>      
-        </form>
-      </div>
+   <body >
+    <header style= "background-image: linear-gradient(to right top, #13fdfd, #00d6ff, #00a9ff, #0074ff, #121beb);;"> 
+     <div style="height:350px;">
+        <img src="{{ url_for('static',filename='assets/Screenshot_2020-10-31-18-59-01-59.jpg') }}" width="500px" height="250px" class="center"< \img>
+        <br>
+        <div style=" font-size: 25px; font-family: Arial, Helvetica, sans-serif;color: white;">
+          I am a Personal care Chatbot,I am here to help you with all your medical needs.
+        </div> 
+    </header>
+
+    <main id="chat">
+        <main class="form-container">
+            {% block content %}{% endblock %}
+        </main>
+    </main>
+
+    <footer >
+        <div>
+            <img src="{{ url_for('static',filename='assets/image1.jpg') }}" width="440px" height="250px" < \img>
+            <h2 style=" font-size: 25px; font-family: Arial, Helvetica, sans-serif;color: white;"><b> &nbsp; &nbsp; Booking Doctor appointments.</b></h2> 
+            <img src="{{ url_for('static',filename='assets/chatbot.jpeg') }}" width="440px" height="250px" < \img>
+            <h2 style=" font-size: 25px; font-family: Arial, Helvetica, sans-serif;color: white;"><b> &nbsp; &nbsp; Supporting you in every step.</b></h2>
+            <img src="{{ url_for('static',filename='assets/image2.jpg') }}" width="440px" height="250px" < \img>
+            <h2 style=" font-size: 25px; font-family: Arial, Helvetica, sans-serif;color: white;"><b> &nbsp; &nbsp; Medical test appointments.</b></h2> 
+            <h2 style=" font-size: 25px; font-family: Arial, Helvetica, sans-serif;color: white;"><b>Nothing is more important than your HEALTH. </b> </h2>
+            <h2 style=" font-size: 25px;font-family: Arial, Helvetica, sans-serif;color: white;"> <b> *Get your doctor appointments fixed from anywhere.<br> *No need to come to hospital for your medical tests. We come to you to collect your test samples. <br></h2>
+            <h2 style=" font-size: 25px;font-family: Arial, Helvetica, sans-serif;color: white;"> <b> *We provided two services .<br>&nbsp; 1)Booking Doctor Appointment We take the details of the patient and book the appointment in available timings.<br>&nbsp;2)Medical Tests at home We take the details of the patient and the test and also the address from where the test samples have to be collected.<br></h2>  
+              </div> 
+          </div>
+ 
+    </footer>
+    </div>
       <script src="{{ url_for('static',filename='js/javascript.js') }}"></script>
   </body></html>
   
